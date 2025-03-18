@@ -1,16 +1,19 @@
-
-import './App.css'
-import Forms from './components/Forms'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Forms from './components/Forms';
 import { ToastContainer } from 'react-toastify';
-function App() {
-  
 
+function App() {
   return (
-    <>
+    <Router>
       <ToastContainer position="bottom-right" />
-      <Forms />
-    </>
-  )
+      <Routes>
+
+        <Route path="/" element={<Forms />} />
+
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
